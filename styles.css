@@ -1,0 +1,88 @@
+/* Reset untuk margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya untuk section */
+#photo-gallery {
+    padding: 50px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+/* Gaya untuk teks paragraf di dalam section */
+.section__text__p1 {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Gaya untuk judul */
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Kontainer galeri menggunakan grid */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Gaya untuk item dalam galeri */
+.gallery-item {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Gaya untuk gambar di dalam item galeri */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Efek saat item galeri di-hover */
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Gaya untuk teks atau deskripsi (kosong di sini) */
+.gallery-item p {
+    margin: 10px 0;
+    color: #777;
+}
+
+/* Gaya untuk link tombol 'Lihat Detail' */
+.gallery-item a {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Efek hover untuk tombol */
+.gallery-item a:hover {
+    background-color: #2980b9;
+}
